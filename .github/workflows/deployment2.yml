@@ -9,6 +9,7 @@ jobs:
       - name: Install dependencies
         run: |
           sudo apt-get update
+          npx eslint --ext .jsx --fix src
           npm run lint
   test:
     runs-on: ubuntu-latest
@@ -30,3 +31,5 @@ jobs:
         run: npm run build
       - name: Deploy code
         run: echo "Deploying code ....Derrick is the best DevOps engineer in the world"
+      - name: Run lint
+        

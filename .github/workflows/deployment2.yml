@@ -32,4 +32,7 @@ jobs:
       - name: Deploy code
         run: echo "Deploying code ....Derrick is the best DevOps engineer in the world"
       - name: Run lint
-        
+        run: |
+          sudo apt-get update
+          npx eslint --ext .jsx --fix src
+          npm run lint
